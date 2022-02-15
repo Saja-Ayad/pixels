@@ -93,7 +93,7 @@ def update():
     if not session.get("user_id", None):
         return redirect("/lognin")
 
-@app.route("/delete?id=1")
+@app.route("/delete")
 def delete():
     if not session.get("user_id", None):
         return redirect("/lognin")
