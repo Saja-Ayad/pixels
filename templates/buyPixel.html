@@ -1,0 +1,17 @@
+{% extends "layout.html"%}
+{% block content %}
+<form action="{{url_for('buy_pixel')}}" method="POST" enctype="multipart/form-data">
+    <input type="text" placeholder="Brand Name" name="name">
+    <input type="number" placeholder="Column" name="column">
+    <input type="number" placeholder="Row" name="row">
+    <input type="text" placeholder="Category" name="section">
+    <input type="text" placeholder="Description" name="desc">
+    <input type="file" id="img_brand" name="img_brand" accept="image/png, image/jpg">
+    <label for="sign-agree-check">
+        I agree to the terms & conditions
+        <input type="checkbox" id="sign-agree-check">
+        <span class="checkmark"></span>
+    </label>
+    <button type="submit" class="site-btn">Buy Now</button>
+</form>
+{% endblock %}

@@ -16,18 +16,18 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
 
 <!-- Bootstrap core CSS -->
-<link href="static/css/bootstrap.css" rel="stylesheet">
-<link href="static/style.css" rel="stylesheet">
+<link href="../static/css/bootstrap.css" rel="stylesheet">
+<link href="../static/style.css" rel="stylesheet">
 <!-- FontAwesome Icons core CSS -->
-<link href="static/css/font-awesome.min.css" rel="stylesheet">
+<link href="../static/css/font-awesome.min.css" rel="stylesheet">
 
 
 
 <!-- Responsive styles for this template -->
-<link href="static/css/responsive.css" rel="stylesheet">
+<link href="../static/css/responsive.css" rel="stylesheet">
 
 <!-- Colors for this template -->
-<link href="static/css/colors.css" rel="stylesheet">
+<link href="../static/css/colors.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -43,7 +43,7 @@
 
     <!-- LOADER -->
     <div id="preloader">
-        <img class="preloader" src="images/loader.gif" alt="">
+        <img class="preloader" src="../static/images/loader.gif" alt="">
     </div>
     <!-- end loader -->
     <!-- END LOADER -->
@@ -73,9 +73,9 @@
                         <div class="collapse navbar-collapse justify-content-md-center" id="cloapediamenu">
                             <ul class="navbar-nav">
                                 <li class="nav-item"> <a class="nav-link color-pink-hover" href="index.html">HOME</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link color-pink-hover">SURVICES</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link color-pink-hover">CONTACT</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link color-pink-hover">ABOUT US</a></li>
+                                <li class="nav-item"><a href="singel.html" class="nav-link color-pink-hover">SURVICES</a></li>
+                                <li class="nav-item"><a href="contact.html" class="nav-link color-pink-hover">CONTACT</a></li>
+                                <li class="nav-item"><a href="category.html" class="nav-link color-pink-hover">ABOUT US</a></li>
                             </ul>
                             <!-- end ul -->
                         </div>
@@ -87,8 +87,13 @@
                     <div class=" hidden-md-down hidden-xs-down">
                         <form>
                             <div class="text-end  text-right">
-                                <button type="button" class="btn btn-outline-info me-2"><a href="sign.html">  Sign-in </a></button>
+                                {% if not session.get("user_id",None) %}
+                                <button type="button" class="btn btn-outline-info me-2"><a href="signin.html">  Sign-in </a></button>
                                 <button type="button" class="btn btn-warning alert-danger">Sign-up</button>"
+                                {% else %}
+                                <button type="button" class="btn btn-outline-info me-2"><a href="{{url_for('logout')}}">  Log Out </a></button>
+                                {% endif %}
+                                
                             </div>
                         </form>
 
@@ -132,7 +137,6 @@
                                                     <button class="tablinks" onclick="openCategory(event, 'cat02')">Fashion</button>
                                                     <button class="tablinks" onclick="openCategory(event, 'cat04')">Architecture</button>
                                                     <button class="tablinks" onclick="openCategory(event, 'cat03')">Favorite</button>
-
                                                     <button class="tablinks" onclick="openCategory(event, 'cat05')">Others</button>
                                                 </div>
 
@@ -143,7 +147,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="single.html" title="">
-                                                                            <img src="upload/menu_01.jpg" alt="" class="img-fluid">
+                                                                            <img src="../static/upload/menu_01.jpg" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div>
                                                                             <!-- end hover -->
@@ -163,7 +167,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="single.html" title="">
-                                                                            <img src="upload/menu_02.jpg" alt="" class="img-fluid">
+                                                                            <img src="../static/upload/menu_02.jpg" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div>
                                                                             <!-- end hover -->
@@ -183,7 +187,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="single.html" title="">
-                                                                            <img src="upload/menu_03.jpg" alt="" class="img-fluid">
+                                                                            <img src="../static/upload/menu_03.jpg" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div>
                                                                             <!-- end hover -->
@@ -203,7 +207,7 @@
                                                                 <div class="blog-box">
                                                                     <div class="post-media">
                                                                         <a href="single.html" title="">
-                                                                            <img src="upload/menu_04.jpg" alt="" class="img-fluid">
+                                                                            <img src="../static/upload/menu_04.jpg" alt="" class="img-fluid">
                                                                             <div class="hovereffect">
                                                                             </div>
                                                                             <!-- end hover -->
@@ -221,340 +225,8 @@
                                                         </div>
                                                         <!-- end row -->
                                                     </div>
-                                                    <div id="cat02" class="tabcontent">
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_05.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                            <span class="menucat">Fashion</span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">2017 summer stamp will have design models here</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
 
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_06.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                            <span class="menucat">Collections</span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Which color is the most suitable color for you?</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_07.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                            <span class="menucat">Fashion</span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Subscribe to these sites to keep an eye on the fashion</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_08.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                            <span class="menucat">Trends</span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">The most trends of this year with color combination</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </div>
-                                                    <div id="cat03" class="tabcontent">
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_09.jpg" alt="" class="img-fluid">
-
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">I visited the architects of Istanbul for you</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_11.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Prepared handmade dish dish in the Netherlands</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_12.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">I recommend you visit the fairy chimneys</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_13.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">One of the most beautiful ports in the world</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </div>
-                                                    <div id="cat04" class="tabcontent">
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_14.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                            <span class="menucat">Places</span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">A collection of the most beautiful shop designs</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_15.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                            <span class="menucat">Designs</span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">America's and Canada's most beautiful wine houses</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_16.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                            <span class="menucat">Minimalism</span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">The most professional ways to color your walls</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_17.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                            <span class="menucat">Furnishings</span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Stylish cabinet designs and furnitures</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </div>
-                                                    <div id="cat05" class="tabcontent">
-                                                        <div class="row">
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_18.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Grilled vegetable with fish prepared with fish</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_19.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">The world's finest and clean meat restaurants</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_20.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Fried veal and vegetable dish</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-
-                                                            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                                                <div class="blog-box">
-                                                                    <div class="post-media">
-                                                                        <a href="single.html" title="">
-                                                                            <img src="upload/menu_21.jpg" alt="" class="img-fluid">
-                                                                            <div class="hovereffect">
-                                                                            </div>
-                                                                            <!-- end hover -->
-                                                                        </a>
-                                                                    </div>
-                                                                    <!-- end media -->
-                                                                    <div class="blog-meta">
-                                                                        <h4><a href="single.html" title="">Tasty pasta sauces and recipes</a></h4>
-                                                                    </div>
-                                                                    <!-- end meta -->
-                                                                </div>
-                                                                <!-- end blog-box -->
-                                                            </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </div>
+                                                    <!-- layout.text-->
                                                 </div>
                                                 <!-- end tab-details -->
                                             </div>

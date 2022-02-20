@@ -5,3 +5,6 @@
 
 # User-specific files
 venv/
+flask_session/
+extra_code/
+*.sql
