@@ -12,6 +12,8 @@ app.config['SESSION_PERMANENT'] = False
 app.config['SESSION_TYPE'] = "filesystem"
 Session(app)
 
+sections = DB.execute("SELECT section_name from sections order by section_name desc")
+
 
 @app.route("/")
 def index():
@@ -19,7 +21,10 @@ def index():
         return redirect("/login")
     else:
         brands = DB.execute("SELECT * from brands order by review desc")
-        return render_template("index.html", brands=brands)
+        sections = DB.execute("SELECT section_name from sections order by section_name desc")
+        print(sections)
+        render_template("buy-Pixel.html", sections = sections)
+        return render_template("index.html", brands = brands, sections = sections)
 
 
 @app.route("/login", methods=['GET','POST'])
@@ -106,7 +111,7 @@ def buy_pixel():
         row = DB.execute("select * from sections where section_name = ?", section)
         if len(row) < 1:
             flash("This Section Is Unvaild", "danger")
-            return render_template("/buyPixel.html")
+            return render_template("/buy-Pixel.html", sections = sections)
 
         section_id = row[0]['id']
         img_path = ""
@@ -125,12 +130,12 @@ def buy_pixel():
         return redirect("/")
 
     else:
-        return render_template("/buyPixel.html")    
+        return render_template("/buy-Pixel.html", sections = sections)    
 
     
 
 @app.route("/review")
-def update():
+def review():
     if not session.get("user_id", None):
         return redirect("/lognin")
 
@@ -145,9 +150,25 @@ def delete():
     
 
 
-@app.route("/new")
-def new():
-    pass
+@app.route("/category")
+def category():
+    return render_template("/category.html")
+
+
+@app.route("/contact")
+def contact():
+    return render_template("/contact.html")
+
+
+@app.route("/pixels")
+def pixels():
+    return render_template("/pixels.html")
+
+
+@app.route("/single")    
+def single():
+    return render_template("/single.html")
+    
 
 if __name__ == '__main__':
     app.run(debug=True)

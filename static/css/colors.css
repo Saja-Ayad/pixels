@@ -1,13 +1,3 @@
-/**************************************
-
-    File Name: colors.css
-    Template Name: Cloapedia
-    Created By: HTML.Design
-    http://themeforest.net/user/wpdestek
-
-**************************************/
-
-
 /* COLORS 
 **************************************/
 
@@ -27,12 +17,17 @@ a:focus,
     color: #3197d6 !important;
 }
 
+.btn1 {
+    background-color: white;
+    border-color: #E8918F;
+}
+
 .dmtop,
 .search-form .btn:hover,
 .search-form .btn:focus,
 .search-form .btn {
     color: #ffffff !important;
-    background-color: #3197d6 !important;
+    background-color: #E8918F !important;
 }
 
 .tag-cloud-single span,
@@ -42,7 +37,7 @@ a:focus,
 .btn:focus,
 .navbar-inverse .navbar-toggler {
     color: #ffffff !important;
-    background-color: #3197d6;
+    background-color: #E8918F;
 }
 
 .blockquote {
@@ -60,7 +55,7 @@ a:focus,
 .navbar-nav .nav-link.active.color-pink-hover,
 .navbar-nav .nav-link.color-pink-hover:hover,
 .navbar-nav .nav-link.color-pink-hover:focus {
-    color: #deacca !important;
+    color: #E8918F !important;
 }
 
 .page-title .bg-pink,
@@ -73,7 +68,7 @@ a:focus,
 .navbar-nav .nav-link.active.color-aqua-hover,
 .navbar-nav .nav-link.color-aqua-hover:hover,
 .navbar-nav .nav-link.color-aqua-hover:focus {
-    color: #2ad2c9 !important;
+    color: #E8918F !important;
 }
 
 .page-title .bg-aqua,

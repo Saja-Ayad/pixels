@@ -1,14 +1,4 @@
-/**************************************
-
-    File Name: style.css
-    Template Name: Cloapedia
-    Created By: HTML.Design
-    http://themeforest.net/user/wpdestek
-
-**************************************/
-
-
-/**************************************
+        /**************************************
     Table of Content
     
     1. BASIC
@@ -19,11 +9,9 @@
     6. BLOG
     7. WIDGETS
 **************************************/
-
-
-/* BASIC 
+        /* BASIC 
 **************************************/
-
+        
 body {
     font-size: 15px;
     line-height: 26px;
@@ -51,7 +39,6 @@ h4,
 h5,
 h6 {
     font-weight: 700;
-    line-height: 1.4;
     color: #111111;
 }
 
@@ -68,7 +55,6 @@ h6:hover a {
 h1 {
     font-size: 32px;
     line-height: 40px;
-    margin-bottom: 23px
 }
 
 h2 {
@@ -134,16 +120,8 @@ a {
     border-radius: 0 !important;
     padding: 2rem;
 }
-
-
 /* HEADER 
 **************************************/
-
-.header {
-    padding: 0.4rem 0;
-    position: relative;
-    background-color: #ffffff;
-}
 
 .navbar-inverse .navbar-nav .nav-link,
 .navbar-nav .nav-link {
@@ -177,6 +155,10 @@ a {
     background-color: #ffffff;
 }
 
+.header {
+    margin: 0px 80px;
+}
+
 .navbar-nav {
     margin: 0;
 }
@@ -186,7 +168,7 @@ a {
     box-shadow: none;
     border-radius: 0;
     min-width: 240px;
-    margin-top: 15px !important;
+    margin-top: 10px !important;
     border-color: #edeff2;
 }
 
@@ -198,7 +180,7 @@ a {
     font-weight: 400;
     text-transform: capitalize;
     font-size: 14px;
-    padding: 4px 1.8rem;
+    padding: 3px 1rem;
 }
 
 .header .dropdown-item:hover,
@@ -230,7 +212,7 @@ a {
     display: block;
     position: relative;
     background-color: #ffffff;
-    padding: 1rem 2rem;
+    padding: 0.5rem 0.5rem;
     font-size: 14px;
     border-bottom: 1px dashed #e2e2e2;
 }
@@ -312,8 +294,6 @@ a {
 .post-media img {
     width: 100%;
 }
-
-
 /* Style the tab */
 
 div.tab {
@@ -323,8 +303,6 @@ div.tab {
     width: 20%;
     background-color: #edeff2;
 }
-
-
 /* Style the buttons inside the tab */
 
 div.tab button {
@@ -349,8 +327,6 @@ div.tab button {
     line-height: 1;
     text-transform: capitalize;
 }
-
-
 /* Change background color of buttons on hover */
 
 div.tab button:hover,
@@ -364,8 +340,6 @@ div.tab button.active {
 div.tab button:hover {
     border-top: 0;
 }
-
-
 /* Style the tab content */
 
 .tabcontent {
@@ -395,13 +369,11 @@ div.tab button:hover {
     padding: 2rem 1.5rem 0;
     width: 80%;
 }
-
-
 /* SECTIONS
 **************************************/
 
 .section {
-    padding: 4rem 0;
+    padding: 3rem 0;
     display: block;
     position: relative;
     background-color: #ffffff;
@@ -427,7 +399,7 @@ div.tab button:hover {
 }
 
 .first-section .container-fluid {
-    padding: 0 3px;
+    padding: 0 10px;
 }
 
 .section-title h3 {
@@ -534,6 +506,10 @@ div.tab button:hover {
     width: 33.33333%;
 }
 
+.ct {
+    overflow-wrap: break-word;
+}
+
 .post-media img,
 .masonry-box img {
     -webkit-transition: all .3s ease-in-out;
@@ -581,8 +557,6 @@ div.tab button:hover {
     font-size: 12px;
     padding: 0.1rem 1rem;
 }
-
-
 /* BLOG 
 **************************************/
 
@@ -830,6 +804,10 @@ div.tab button:hover {
     background-image: none;
 }
 
+#wrapper {
+    margin: 0 20px;
+}
+
 .banner-spot {
     background: #edeff2 url("images/ads-bg.png") no-repeat scroll center right / auto 100%;
     clear: both;
@@ -852,6 +830,12 @@ div.tab button:hover {
 .blog-meta h4 {
     padding: 1rem 0 0.5rem;
     margin: 0;
+    font-size: 21px;
+}
+
+.blog-meta h1 {
+    padding: 1rem 0 0.5rem;
+    top: 50%;
     font-size: 21px;
 }
 
@@ -899,6 +883,10 @@ hr.invis1 {
 hr.invis2 {
     border: 0;
     margin: 6rem 0;
+}
+
+.s1 {
+    left: 170px;
 }
 
 hr.invis3 {
@@ -1038,7 +1026,7 @@ hr.invis3 {
 
 .blog-video-system .col-md-12,
 .blog-grid-system .col-md-6 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .blog-video-system .blog-meta.big-meta h4 {
@@ -1049,15 +1037,13 @@ hr.invis3 {
 .blog-video-system .btn {
     margin-top: 1rem;
 }
-
-
 /* WIDGETS 
 **************************************/
 
 .sidebar .widget {
     position: relative;
     display: block;
-    margin-bottom: 3rem;
+    margin-bottom: 1.4rem;
 }
 
 .sidebar .banner-spot {
@@ -1136,7 +1122,7 @@ hr.invis3 {
 
 .search-form .form-control {
     margin: 0;
-    min-width: 240px;
+    min-width: 200px;
     border-right: 0;
 }
 
@@ -1185,6 +1171,10 @@ hr.invis3 {
 
 .footer-text img {
     max-width: 290px;
+}
+
+.footer {
+    background-color: #dadada;
 }
 
 .footer-text p {
@@ -1258,7 +1248,7 @@ hr.invis3 {
     line-height: 1;
     letter-spacing: 0.3px;
     vertical-align: middle;
-    width: 400px;
+    width: 300px;
 }
 
 .card-block {
@@ -1362,13 +1352,11 @@ hr.invis3 {
 }
 
 .btn {
-    background-color: #111111;
-    border: 0 none;
-    border-radius: 0;
     font-size: 14px;
     font-weight: bold;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1.5rem;
     text-transform: none;
+    background-color: grey;
 }
 
 .link-widget li {
@@ -1489,12 +1477,12 @@ h2 {
 }
 
 .carousel .thumb-content .btn {
-    color: #7ac400;
+    color: #E8918F;
     font-size: 11px;
     text-transform: uppercase;
     font-weight: bold;
     background: none;
-    border: 1px solid #7ac400;
+    border: 1px solid #E8918F;
     padding: 6px 14px;
     margin-top: 30px;
     line-height: 16px;
@@ -1504,7 +1492,7 @@ h2 {
 .carousel .thumb-content .btn:hover,
 .carousel .thumb-content .btn:focus {
     color: #fff;
-    background: #7ac400;
+    background: #E8918F;
     box-shadow: none;
 }
 
@@ -1528,7 +1516,7 @@ h2 {
 .carousel-control-next {
     height: 44px;
     width: 40px;
-    background: #7ac400;
+    background: gray;
     margin: 140px 0;
     border-radius: 4px;
     opacity: 0.8;
@@ -1536,7 +1524,7 @@ h2 {
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-    background: #78bf00;
+    background: #E8918F;
     opacity: 1;
 }
 
@@ -1611,13 +1599,9 @@ h2 {
     color: #ffc000;
 }
 
-.container-xl {
-    margin: 10px 5px 0px 0px;
-}
-
 .x1 {
-    margin: 10px 130px;
-    padding: 20px;
+    margin: 10px 130px 0px 110px;
+    padding: 10px;
 }
 
 .c1 .wish-icon {
@@ -1646,7 +1630,8 @@ h2 {
 
 .container1 {
     display: block;
-    margin: 0px 180px;
+    margin: 0px auto;
+    right: 180px;
 }
 
 pagination-outer {
@@ -1690,8 +1675,8 @@ pagination-outer {
 
 .pagination li.active a.page-link,
 .pagination li a.page-link:hover {
-    background: #85b83d;
-    border-color: #739d46;
+    background: #E8918F;
+    border-color: #E8918F;
     color: #fff;
 }
 
@@ -1713,13 +1698,9 @@ pagination-outer {
     margin: 0px auto;
 }
 
-.con1 {
-    left: -40px;
-    margin: 0px 140px;
-}
-
 .con {
     margin: 0px 80px;
+    background-color: rgb(202, 196, 255)
 }
 
 table,
@@ -1736,10 +1717,8 @@ table {
 td:hover {
     background-color: #5b5f5f;
 }
-
-
 /*---------------------
-  Sign In
+Sign In
 -----------------------*/
 
 .fixed-position {
@@ -1809,7 +1788,7 @@ td:hover {
 
 .signin__form__text {
     padding: 50px;
-    padding-top: 38px;
+    padding-top: 40px;
 }
 
 .signin__form__text p {
@@ -1912,4 +1891,29 @@ td:hover {
 
 .signin__logo {
     margin-bottom: 10px;
+}
+
+.header1 {
+    margin-right: 80px;
+}
+
+.s1 {
+    left: 15px;
+}
+
+.site-btn {
+    width: 100%;
+    background: #E8918F;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+.site-btn:hover,
+.site-btn:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #E8918F
 }

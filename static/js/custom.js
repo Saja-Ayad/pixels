@@ -1,10 +1,3 @@
-/**************************************
-    File Name: custom.js
-    Template Name: Cloapedia
-    Created By: HTML.Design
-    http://themeforest.net/user/wpdestek
-**************************************/
-
 (function($) {
     "use strict";
     $(document).ready(function() {
@@ -31,15 +24,15 @@
         $(".preloader").on(600).fadeOut("slow");
     });
 
-    jQuery(window).scroll(function(){
+    jQuery(window).scroll(function() {
         if (jQuery(this).scrollTop() > 1) {
-            jQuery('.dmtop').css({bottom:"25px"});
+            jQuery('.dmtop').css({ bottom: "25px" });
         } else {
-            jQuery('.dmtop').css({bottom:"-100px"});
+            jQuery('.dmtop').css({ bottom: "-100px" });
         }
     });
-    jQuery('.dmtop').click(function(){
-        jQuery('html, body').animate({scrollTop: '0px'}, 800);
+    jQuery('.dmtop').click(function() {
+        jQuery('html, body').animate({ scrollTop: '0px' }, 800);
         return false;
     });
 
@@ -65,4 +58,4 @@ function openCategory(evt, catName) {
     // Show the current tab, and add an "active" class to the link that opened the tab
     document.getElementById(catName).style.display = "block";
     evt.currentTarget.className += " active";
-} 
+}

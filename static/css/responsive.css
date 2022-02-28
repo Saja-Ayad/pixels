@@ -1,13 +1,3 @@
-/**************************************
-
-    File Name: responsive.css
-    Template Name: Cloapedia
-    Created By: HTML.Design
-    http://themeforest.net/user/wpdestek
-
-**************************************/
-
-
 /* RESPONSIVE 
 **************************************/
 
@@ -139,12 +129,12 @@
     .header .navbar-nav .has-submenu {
         position: relative;
     }
-    .header .navbar-nav .has-submenu:hover > ul {
+    .header .navbar-nav .has-submenu:hover>ul {
         visibility: visible;
         opacity: 1;
         top: 100%;
     }
-    .header .navbar-nav .has-submenu:hover > ul li ul {
+    .header .navbar-nav .has-submenu:hover>ul li ul {
         margin-top: -1px;
     }
     .header .navbar-nav .has-submenu ul {
@@ -160,7 +150,7 @@
         -moz-border-radius: 0;
         border-radius: 0;
     }
-    .header .navbar-nav .has-submenu > ul {
+    .header .navbar-nav .has-submenu>ul {
         position: absolute;
         top: 130%;
         visibility: hidden;
@@ -168,22 +158,22 @@
         opacity: 0;
         left: 0;
     }
-    .header .navbar-nav .has-submenu > ul.start-right {
+    .header .navbar-nav .has-submenu>ul.start-right {
         right: 0;
         left: auto;
     }
-    .header .navbar-nav .has-submenu > ul li {
+    .header .navbar-nav .has-submenu>ul li {
         position: relative;
     }
-    .header .navbar-nav .has-submenu > ul li:hover > ul {
+    .header .navbar-nav .has-submenu>ul li:hover>ul {
         visibility: visible;
         opacity: 1;
         left: 100%;
     }
-    .header .navbar-nav .has-submenu > ul li:hover > ul.show-right {
+    .header .navbar-nav .has-submenu>ul li:hover>ul.show-right {
         right: 100%;
     }
-    .header .navbar-nav .has-submenu > ul li ul {
+    .header .navbar-nav .has-submenu>ul li ul {
         position: absolute;
         top: 0;
         visibility: hidden;
@@ -191,7 +181,7 @@
         opacity: 0;
         left: 130%;
     }
-    .header .navbar-nav .has-submenu > ul li ul.show-right {
+    .header .navbar-nav .has-submenu>ul li ul.show-right {
         right: 130%;
         left: auto;
     }
