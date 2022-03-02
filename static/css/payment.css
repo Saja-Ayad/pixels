@@ -12,6 +12,7 @@ body {
 
 .nav-pills .nav-link.active {
     color: #fff;
+    background-color: #dadada;
 }
 
 * {

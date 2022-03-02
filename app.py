@@ -155,6 +155,11 @@ def category():
     return render_template("/category.html")
 
 
+@app.route("/services")
+def services():
+    return render_template("/services.html")
+
+
 @app.route("/contact")
 def contact():
     return render_template("/contact.html")
